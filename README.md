@@ -16,7 +16,7 @@ From this tables we will be able to find insights in what songs their users are 
 AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY
 AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_KEY
 ```
-Create an S3 Bucket named `yourname-input` where the input will be stored.
+Create an S3 Bucket named `yourname-inputToSpark` where the input will be stored.
 Create an S3 Bucket named `yourname-outputFromSpark` where output results from Spark will be stored.
 
 Finally, run the following command:
