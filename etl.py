@@ -133,8 +133,8 @@ def process_log_data(spark, input_data, output_data):
     
 def main():
     spark = create_spark_session()
-    input_data = "s3a://cy235-inputToSpark/" #s3a supports objects up to 5TB, which is more powerful than s3
-    output_data = "s3a://cy235-outputFromSpark/"
+    input_data = "s3a://cy235-input-to-spark/" #s3a supports objects up to 5TB, which is more powerful than s3
+    output_data = "s3a://cy235-output-from-spark/"
 
     process_song_data(spark, input_data, output_data)
     process_log_data(spark, input_data, output_data)
