@@ -39,7 +39,7 @@ def process_song_data(spark, input_data, output_data):
     ])
 
     # get filepath to song data file
-    song_data = input_data + "song_data/*/*/*/*.json"
+    song_data = input_data + "song_data/*/*/*/*.json" #you can change here according to your folder structure
 
     # read song data file, JSON structure
     df = spark.read.json(song_data, schema=songdata_schema)
@@ -88,7 +88,7 @@ def process_log_data(spark, input_data, output_data):
     ])
         
     # get filepath to log data file
-    log_data = input_data + "log_data/*.json"
+    log_data = input_data + "log_data/*.json" #you can change here according to your folder structure
 
     # read log data file, JSON structure
     df = spark.read.json(log_data, schema = logdata_schema)
@@ -133,8 +133,8 @@ def process_log_data(spark, input_data, output_data):
     
 def main():
     spark = create_spark_session()
-    input_data = "s3a://cy235-spark/"
-    output_data = "s3a://cy235-sparkify-spark/"
+    input_data = "s3a://cy235-input/"
+    output_data = "s3a://cy235-outputFromSpark/"
 
     process_song_data(spark, input_data, output_data)
     process_log_data(spark, input_data, output_data)
