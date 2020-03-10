@@ -38,7 +38,7 @@ The files found at this project are the following:
 1. Load credentials
 2. Read data from S3
     - Song data: `s3://yourname-input/song_data`
-    - Log data: `s3://yournam-input/log_data`
+    - Log data: `s3://yourname-input/log_data`
 
     The script reads song_data and load_data from S3.
 
